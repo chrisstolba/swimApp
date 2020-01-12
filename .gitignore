@@ -1,4 +1,8 @@
+.DS_Store
+
 
 
 server/node_modules
 server/dbConfig.js
+server/.DS_Store
+server/package-lock.json
