@@ -2,7 +2,7 @@
 
 This app is developed to help manage my swim team.
 
-Directorys\
+Directorys
 
 /app - Holds the React based web-app.\
 /database - Holds the SQL scripts.\
