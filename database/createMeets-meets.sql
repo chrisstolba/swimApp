@@ -8,6 +8,6 @@ INSERT INTO meets (name, location, date) VALUES ('El Segundo', 'Away', '2020/03/
 INSERT INTO meets (name, location, date) VALUES ('FNL Invite', 'Home', '2020/03/27');
 INSERT INTO meets (name, location, date) VALUES ('Torrance', 'Home', '2020/03/31');
 INSERT INTO meets (name, location, date) VALUES ('North', 'Home', '2020/04/13');
-INSERT INTO meets (name, location, date) VALUES ('South', 'Home', '20202/04/22');
+INSERT INTO meets (name, location, date) VALUES ('South', 'Home', '2020/04/22');
 INSERT INTO meets (name, location, date) VALUES ('League Prelims', 'Home', '2020/04/28');
 INSERT INTO meets (name, location, date) VALUES ('League Finals', 'Home', '2020/04/30');
