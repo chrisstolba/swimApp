@@ -1,0 +1,16 @@
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Medley Relay (Backstroke)', 108.40, 119.20, 125.00, 137.5);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Medley Relay (Breaststroke)', 108.40, 119.20, 125.00, 137.5);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Medley Relay (Butterfly)', 108.40, 119.20, 125.00, 137.5);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Medley Relay (Freestyle)', 108.40, 119.20, 125.00, 137.5);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Freestyle', 112.50, 122.00, 130.00, 141.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Individual Medley', 127.50, 241.50, 244.00, 268.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('50 Freestyle', 22.80, 24.30, 26.50, 28.10);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('100 Butterfly', 56.75, 61.00, 64.00, 74.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('100 Freestyle', 50.50, 54.50, 57.50, 64.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('500 Freestyle', 315.00, 345.00, 345.00, 385.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Freestyle Relay (Flat)', 96.00, 104.20, 110.50, 122.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('200 Freestyle Relay (Rolling)', 96.00, 104.20, 110.50, 122.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('100 Backstroke', 60.00, 66.00, 66.00, 74.30);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('100 Breaststroke', 65.50, 71.00, 75.00, 82.50);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('400 Freestyle Relay (Flat)', 215.00, 244.00, 245.00, 276.00);
+INSERT INTO events (name, consmen, automen, conswomen, autowomen) VALUES ('400 Freestyle Relay (Rolling)', 215.00, 244.00, 245.00, 276.00);
