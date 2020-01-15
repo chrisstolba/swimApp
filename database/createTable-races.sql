@@ -1,5 +1,5 @@
 create table races (
-  id bigint unsigned not null unique,
+  id bigint unsigned not null unique auto_increment,
   meetid bigint unsigned not null,
   eventid bigint unsigned not null,
   swimmerid bigint unsigned not null,
