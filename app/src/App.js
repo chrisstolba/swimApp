@@ -4,8 +4,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
 
-import SERVER from "./helpers/SERVER";
-
 import "./Main.css";
 
 function App() {
@@ -29,16 +27,16 @@ function App() {
     })
       .then(res => res.json())
       .then(res => {
-        const mensTeam = res.filter(swimmer =>
+        const men = res.filter(swimmer =>
           swimmer.sex === "Male" ? true : false
         );
-        const womensTeam = res.filter(swimmer =>
+        const women = res.filter(swimmer =>
           swimmer.sex === "Female" ? true : false
         );
-        console.log(mensTeam);
-        console.log(womensTeam);
-        setSwimmersMen(mensTeam);
-        setSwimmersWomen(womensTeam);
+        console.log("swimmersMen", men);
+        console.log("swimmersWomen", women);
+        setSwimmersMen(men);
+        setSwimmersWomen(women);
       })
       .catch(e => console.error(e));
   }, [reloadSwimmers]);
@@ -54,7 +52,7 @@ function App() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res);
+        console.log("meets", res);
         setMeets(res);
       })
       .catch(e => console.error(e));
@@ -71,7 +69,7 @@ function App() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res);
+        console.log("events", res);
         setEvents(res);
       })
       .catch(e => console.error(e));
