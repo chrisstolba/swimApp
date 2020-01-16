@@ -18,10 +18,10 @@ router.post("/", async (req, res) => {
     team,
     meetID,
     eventID,
-    swimmerID,
-    swimmerID,
-    swimmerID,
-    swimmerID
+    swimmerID_1,
+    swimmerID_2,
+    swimmerID_3,
+    swimmerID_4
   } = ref.body;
 
   const SQLCommand = `INSERT INTO lineups_${team} (meetid, eventid, swimmerid_1, swimmerid_2, swimmerid_3, swimmerid_4) VALUES (${meetID}, ${eventID}, ${swimmerID_1}, ${swimmerID_2}, ${swimmerID_3}, ${swimmerID_4});`;
@@ -36,10 +36,10 @@ router.put("/:id", async (req, res) => {
     team,
     meetID,
     eventID,
-    swimmerID,
-    swimmerID,
-    swimmerID,
-    swimmerID
+    swimmerID_1,
+    swimmerID_2,
+    swimmerID_3,
+    swimmerID_4
   } = ref.body;
 
   const SQLCommand = `UPDATE lineups_${team} SET meetid=${meetID}, eventid=${eventID}, swimmerid_1=${swimmerID_1}, swimmerid_2=${swimmerID_2}, swimmerid_3=${swimmerID_3}, swimmerid_4=${swimmerID_4} WHERE id=${id};`;
