@@ -1,9 +1,10 @@
 .DS_Store
 
-app/node_modules
 app/.env
+app/build/
+app/node_modules
 
-server/node_modules
 server/dbConfig.js
-server/.DS_Store
 server/package-lock.json
+server/.DS_Store
+server/node_modules
