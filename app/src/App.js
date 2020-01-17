@@ -91,6 +91,10 @@ function App() {
           dispatchReloadSwimmers={dispatchReloadSwimmers}
           dispatchReloadMeets={dispatchReloadMeets}
           dispatchReloadEvents={dispatchReloadEvents}
+          swimmersMen={swimmersMen}
+          swimmersWomen={swimmersWomen}
+          meets={meets}
+          events={events}
         />
       </Router>
     </div>
