@@ -42,7 +42,7 @@ function App() {
   }, [reloadSwimmers]);
 
   useEffect(() => {
-    fetch("http://localhost:50000/meets", {
+    fetch(process.env.REACT_APP_API_URL + "/meets", {
       method: "GET",
       mode: "cors",
       headers: {
@@ -59,7 +59,7 @@ function App() {
   }, [reloadMeets]);
 
   useEffect(() => {
-    fetch("http://localhost:50000/events", {
+    fetch(process.env.REACT_APP_API_URL + "/events", {
       method: "GET",
       mode: "cors",
       headers: {
