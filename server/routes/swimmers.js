@@ -22,9 +22,6 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  console.log(`POST @ /swimmers/`);
-  console.log(req.body);
-
   const { firstName, lastName, classOf, sex, active } = req.body;
   const SQLCommand = `INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('${firstName}', '${lastName}', ${classOf}, '${sex}', ${active});`;
   const conn = await connection(dbConfig).catch(e => console.error(e));
