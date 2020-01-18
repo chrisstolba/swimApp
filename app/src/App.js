@@ -17,7 +17,7 @@ function App() {
   const [events, setEvents] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:50000/swimmers", {
+    fetch(process.env.REACT_APP_API_URL + "/swimmers", {
       method: "GET",
       mode: "cors",
       headers: {
