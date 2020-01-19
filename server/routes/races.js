@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const { team, meetID, eventID, swimmerID, time } = req.body;
-  const SQLCommand = `INSERT INTO races_{team} (meetid, eventid, swimmerid, time) VALUES (${meetID}, ${eventID}, ${swimmerID}, ${time});`;
+  const SQLCommand = `INSERT INTO races_${team} (meetid, eventid, swimmerid, time) VALUES (${meetID}, ${eventID}, ${swimmerID}, ${time});`;
   const conn = await connection(dbConfig).catch(e => console.error(e));
   const results = await query(conn, SQLCommand).catch(e => console.error(e));
   res.send(results);

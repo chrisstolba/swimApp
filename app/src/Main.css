@@ -115,6 +115,7 @@ a:visited {
 .BodyContainer {
 }
 
+.SubmitTimesContainer,
 .CreateMeetContainer,
 .CreateSwimmerContainer {
   display: grid;
@@ -126,6 +127,7 @@ a:visited {
   border-radius: 10px;
 }
 
+.SubmitTimesForm,
 .CreateMeetForm,
 .CreateSwimmerForm {
   display: grid;
@@ -135,6 +137,11 @@ a:visited {
 .formElement {
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+
+.formElement_timeEntry {
+  display: grid;
+  grid-template-columns: 70px auto 70px auto 70px;
 }
 
 .submitButton {

@@ -83,6 +83,9 @@ function App() {
   const dispatchReloadEvents = () =>
     setReloadEvents(reloadEvents => !reloadEvents);
 
+  if (!(swimmersMen && swimmersWomen && meets && events))
+    return <h1>Loading</h1>;
+
   return (
     <div className="App">
       <Router>

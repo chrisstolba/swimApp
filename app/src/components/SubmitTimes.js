@@ -1,12 +1,12 @@
 import React from 'react';
 
+import SubmitTimesForm from "./SubmitTimesForm";
+
 const SubmitTimes = props => {
   return (
     <div className="SubmitTimesContainer">
-      <h1>Pick Meet</h1>
-      <h1>Pick Team</h1>
-      <h1>Pick Swimmer</h1>
-      <h1>Event 1-4 Time and Rank</h1>
+      <h1>Submit Times</h1>
+      <SubmitTimesForm {...props} />
     </div>
   );
 };
