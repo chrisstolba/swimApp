@@ -4,7 +4,6 @@ app/.env
 app/build/
 app/node_modules
 
-server/dbConfig.js
+server/.env
 server/package-lock.json
-server/.DS_Store
 server/node_modules
