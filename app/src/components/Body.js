@@ -13,9 +13,6 @@ import CreateMeet from './CreateMeet';
 const Body = props => {
   return (
     <div className="BodyContainer">
-      <button onClick={props.dispatchReloadSwimmers}>Reload Swimmers</button>
-      <button onClick={props.dispatchReloadMeets}>Reload Meets</button>
-      <button onClick={props.dispatchReloadEvents}>Reload Events</button>
       <Switch>
         <Route path="/TopTimes" render={ () => <TopTimes {...props} /> } /> 
         <Route path="/SearchTimes" render={ () => <SearchTimes {...props} /> } /> 

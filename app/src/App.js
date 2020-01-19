@@ -86,16 +86,18 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Body
-          dispatchReloadSwimmers={dispatchReloadSwimmers}
-          dispatchReloadMeets={dispatchReloadMeets}
-          dispatchReloadEvents={dispatchReloadEvents}
-          swimmersMen={swimmersMen}
-          swimmersWomen={swimmersWomen}
-          meets={meets}
-          events={events}
-        />
+        <div className="AppWrapper">
+          <Header />
+          <Body
+            dispatchReloadSwimmers={dispatchReloadSwimmers}
+            dispatchReloadMeets={dispatchReloadMeets}
+            dispatchReloadEvents={dispatchReloadEvents}
+            swimmersMen={swimmersMen}
+            swimmersWomen={swimmersWomen}
+            meets={meets}
+            events={events}
+          />
+        </div>
       </Router>
     </div>
   );

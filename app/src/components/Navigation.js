@@ -17,7 +17,7 @@ const Navigation = props => {
     <div className="NavigationContainer">
       {navButtons.map(button => {
         const buttonPath = "/" + button.split(" ").join("");
-        return <Link key={buttonPath} to={buttonPath}>{button}</Link>;
+        return <Link className="NavigationButton" key={buttonPath} to={buttonPath}>{button}</Link>;
       })}
     </div>
   );

@@ -4,6 +4,7 @@
   --Yellow: #e9d68b;
   --DarkText: #333333;
   --LightText: #555555;
+  --White: #ffffff;
 }
 
 html {
@@ -50,8 +51,87 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: var(--DarkText);
+}
+
+a:visited {
+  color: var(--DarkText);
+}
+
 .App {
   min-height: 100vh;
   background: url("./images/lane_lines_bg.jpg");
   background-size: cover;
+}
+
+.AppWrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.HeaderContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: var(--LightBrown);
+  opacity: 0.8;
+}
+
+#HeaderLogo {
+  padding: 10px 0 10px 20px;
+}
+
+.NavigationContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-gap: 3px;
+  place-items: center;
+  padding: 10px;
+}
+
+.NavigationButton {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid var(--DarkBrown);
+  font-weight: 900;
+}
+
+.NavigationButton:hover {
+  background-color: var(--Yellow);
+}
+
+.NavigationButton:active {
+  color: var(--White);
+}
+
+.BodyContainer {
+  overflow-y: scroll;
+}
+
+.CreateSwimmerContainer {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+  padding: 10px 20px;
+  background-color: var(--LightBrown);
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+.CreateSwimmerForm {
+  display: grid;
+  grid-gap: 3px;
+}
+
+.formElement {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.submitButton {
+  margin: 10px 0 3px 0;
 }

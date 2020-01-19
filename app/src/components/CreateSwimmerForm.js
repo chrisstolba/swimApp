@@ -33,7 +33,7 @@ const CreateSwimmerForm = props => {
   };
 
   return (
-    <form className="CreateSwimmerForm Form" onSubmit={onSubmit}>
+    <form className="CreateSwimmerForm" onSubmit={onSubmit}>
       <p className="formElement">
         <label htmlFor="firstName">First Name:</label>
         <input id="firstName" type="text" required />
@@ -50,7 +50,7 @@ const CreateSwimmerForm = props => {
         <label htmlFor="sex">Sex:</label>
         <SelectSex />
       </p> 
-      <button type="Submit">Create Swimmer</button>
+      <button type="Submit" className="submitButton">Create Swimmer</button>
     </form>
   );
 };
