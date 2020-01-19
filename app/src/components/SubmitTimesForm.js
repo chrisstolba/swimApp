@@ -7,7 +7,7 @@ import SelectEvent from './SelectEvent';
 
 const SubmitTimesForm = props => {
   const [ meet, setMeet ] = useState(null);
-  const [ team, setTeam ] = useState("Mens");
+  const [ team, setTeam ] = useState("Men");
   const [ swimmer, setSwimmer ] = useState(null);
   const [ event, setEvent ] = useState(null);
 
