@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SelectMeet = props => {
-  console.log(props.meets);
   return (
     <select id="meet" name="meet" required>
       <option key="default" value="">Select Meet</option>

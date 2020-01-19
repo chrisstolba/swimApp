@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SelectEvent = props => {
-  console.log(props);
   return (
     <select id="event" name="event" required>
       <option key="default" value="">Pick Event</option>
