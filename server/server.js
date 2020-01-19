@@ -1,5 +1,5 @@
 require("dotenv").config();
-console.log(process.env.DBHOST);
+
 const express = require("express");
 const app = express();
 
