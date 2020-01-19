@@ -16,17 +16,15 @@ function App() {
   const [meets, setMeets] = useState(null);
   const [events, setEvents] = useState(null);
 
-  const options = {
-    method: "GET",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    }
-  };
-
   useEffect(() => {
-    fetch(process.env.REACT_APP_API_URL + "/swimmers", options)
+    fetch(process.env.REACT_APP_API_URL + "/swimmers", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+    })
       .then(res => res.json())
       .then(res => {
         const men = res.filter(swimmer =>
@@ -41,27 +39,41 @@ function App() {
         setSwimmersWomen(women);
       })
       .catch(e => console.error(e));
-  }, [options, reloadSwimmers]);
+  }, [reloadSwimmers]);
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_API_URL + "/meets", options)
+    fetch(process.env.REACT_APP_API_URL + "/meets", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+    })
       .then(res => res.json())
       .then(res => {
         console.log("meets", res);
         setMeets(res);
       })
       .catch(e => console.error(e));
-  }, [options, reloadMeets]);
+  }, [reloadMeets]);
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_API_URL + "/events", options)
+    fetch(process.env.REACT_APP_API_URL + "/events", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+    })
       .then(res => res.json())
       .then(res => {
         console.log("events", res);
         setEvents(res);
       })
       .catch(e => console.error(e));
-  }, [options, reloadEvents]);
+  }, [reloadEvents]);
 
   const dispatchReloadSwimmers = () =>
     setReloadSwimmers(reloadSwimmers => !reloadSwimmers);
