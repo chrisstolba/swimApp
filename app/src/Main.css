@@ -61,9 +61,10 @@ a:visited {
 }
 
 .App {
-  min-height: 100vh;
+  height: 100vh;
   background: url("./images/lane_lines_bg.jpg");
   background-size: cover;
+  overflow-y: scroll;
 }
 
 .AppWrapper {
@@ -74,11 +75,14 @@ a:visited {
 }
 
 .HeaderContainer {
+  position: sticky;
+  top: 0;
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
   background-color: var(--LightBrown);
-  opacity: 0.8;
+  opacity: 0.9;
+  z-index: 99;
 }
 
 #HeaderLogo {
@@ -109,7 +113,6 @@ a:visited {
 }
 
 .BodyContainer {
-  overflow-y: scroll;
 }
 
 .CreateSwimmerContainer {
