@@ -30,7 +30,6 @@ router.post("/", async (req, res) => {
 });
 
 router.delete("/:id", async (req, res) => {
-  console.log(`DELETE @ /swimmers/:${id}`);
   const SQLCommand = `DELETE FROM swimmers WHERE id = ${id};`;
   const conn = await connection(dbConfig).catch(e => console.error(e));
   const results = await query(conn, SQLCommand).catch(e => console.error(e));

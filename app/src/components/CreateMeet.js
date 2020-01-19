@@ -1,10 +1,12 @@
 import React from 'react';
 
+import CreateMeetForm from "./CreateMeetForm";
+
 const CreateMeet = props => {
   return (
     <div className="CreateMeetContainer">
-      <h1>Create Meet Form</h1>
-      <h1>Create a meet lineup entry for each event when the meet is created</h1>
+      <h1>Create New Meet</h1>
+      <CreateMeetForm {...props} />
     </div>
   );
 };
