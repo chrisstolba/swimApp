@@ -33,8 +33,6 @@ function App() {
         const women = res.filter(swimmer =>
           swimmer.sex === "Female" ? true : false
         );
-        console.log("swimmersMen", men);
-        console.log("swimmersWomen", women);
         setSwimmersMen(men);
         setSwimmersWomen(women);
       })
@@ -52,7 +50,6 @@ function App() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log("meets", res);
         setMeets(res);
       })
       .catch(e => console.error(e));
@@ -69,7 +66,6 @@ function App() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log("events", res);
         setEvents(res);
       })
       .catch(e => console.error(e));
