@@ -15,6 +15,6 @@ app.use("/events", require("./routes/events"));
 app.use("/races", require("./routes/races"));
 app.use("/lineups", require("./routes/lineups"));
 
-app.listen(50000, () => {
-  console.log(`Example app listening on port 50000`);
+app.listen(process.env.PORT, () => {
+  console.log(`Example app listening on port ${process.env.PORT}`);
 });
