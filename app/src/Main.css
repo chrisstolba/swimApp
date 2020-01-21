@@ -155,3 +155,26 @@ a:visited {
 .submitButton {
   margin: 10px 0 3px 0;
 }
+
+.SearchTimesResults {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  margin: 10px 0 0 0;
+  grid-gap: 5px;
+}
+
+.SearchTimesResultsEvent,
+.SearchTimesEventCon {
+  text-align: center;
+}
+
+.SearchTimesResultItem {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 10px;
+}
+
+.SearchTimesResultClassOf,
+.SearchTimesResultDate {
+  font-size: 0.8rem;
+}

@@ -8,7 +8,6 @@ const SearchTimesForm = props => {
   const [ meet, setMeet ] = useState('');
   const [ team, setTeam ] = useState("Men");
   const [ event, setEvent ] = useState('');
-  const [ results, setResults ] = useState([]);
 
   const onChange = () => {
     const selectedMeet = document.getElementById("meet").value;
@@ -30,8 +29,6 @@ const SearchTimesForm = props => {
 
     const params = `/${team}/${meetID}/${event}/${swimmer}/${sortField}/${resultsPerSwimmer}`;
 
-    console.log(params);
-
     const options = {
       method: 'GET',
       mode: 'cors',
@@ -41,12 +38,7 @@ const SearchTimesForm = props => {
       }
     };
 
-    fetch(process.env.REACT_APP_API_URL + "/races" + params, options)
-      .then( res => res.json() )    
-      .then( res => console.log(res) )
-      .then( res => setResults(res) )
-      .then( () => console.log("need to move 'results' state to parent container and then pass back down to 'results container'") )
-      .catch( e => console.error(e) );
+    props.fetchRaces(params, options);
   }
 
   return (
