@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const navButtons = [
-  "Top Times",
   "Search Times",
   "Search Swimmers",
   "Search Lineups",

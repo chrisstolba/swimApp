@@ -5,7 +5,9 @@ const SearchSwimmers = props => {
     <div className="SearchSwimmersContainer">
       <h1>Pick Team</h1>
       <h1>Pick Swimmer</h1>
-      <h1>Pick Event or ALL</h1>
+      <h1>Pick Meet</h1>
+      <h1>Pick Event</h1>
+      <h1>Pick Sorty by 'time' or 'date'</h1>
     </div>
   );
 };
