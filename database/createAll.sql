@@ -1,4 +1,5 @@
 create database SwimDB;
+use SwimDB;
 create table swimmers (
   id bigint unsigned not null unique auto_increment,
   firstname varchar(30) not null,

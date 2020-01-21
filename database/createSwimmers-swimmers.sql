@@ -6,7 +6,6 @@ INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Archit',
 INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Joshua', 'Bacolod', 2022, 'Male', true);
 INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Ethan', 'Gifford', 2023, 'Male', true);
 INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Whitney', 'Eckert', 2020, 'Male', true);
-INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Lucas', 'Lee', 2021, 'Male', true);
 INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Ethan', 'Preuett', 2022, 'Male', true);
 INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Aritra', 'Dos', 2021, 'Male', true);
 INSERT INTO swimmers (firstname, lastname, class, sex, active) VALUES ('Jonas', 'Nygren', 2023, 'Male', true);
