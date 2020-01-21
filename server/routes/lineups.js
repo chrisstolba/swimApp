@@ -11,6 +11,7 @@ router.get("/:id", async (req, res) => {
   const conn = await connection(dbConfig).catch(e => console.error(e));
   const results = await query(conn, SQLCommand).catch(e => console.error(e));
   res.send(results);
+  res.end();
 });
 
 router.post("/", async (req, res) => {
@@ -29,6 +30,7 @@ router.post("/", async (req, res) => {
   const conn = await connection(dbConfig).catch(e => console.error(e));
   const results = await query(conn, SQLCommand).catch(e => console.error(e));
   res.send(results);
+  res.end();
 });
 
 router.put("/:id", async (req, res) => {
@@ -47,6 +49,7 @@ router.put("/:id", async (req, res) => {
   const conn = await connection(dbConfig).catch(e => console.error(e));
   const results = await query(conn, SQLCommand).catch(e => console.error(e));
   res.send(results);
+  res.end();
 });
 
 module.exports = router;
