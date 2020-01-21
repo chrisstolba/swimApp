@@ -32,8 +32,6 @@ const SubmitTimesForm = props => {
 
     const time = (minutes * 60) + seconds + (hundredths / 100);
 
-    console.log(meet, team, swimmer, event, time);
-
     const data = { meetID: meet, team, swimmerID: swimmer, eventID: event, time };
 
     const options = {

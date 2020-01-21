@@ -5,37 +5,43 @@ const dbConfig = require("../dbConfig");
 const connection = require("../helpers/connection");
 const query = require("../helpers/query");
 
-router.get("/", async (req, res) => {
-  const { team, meetID, eventID, swimmerID, sortField } = req.body;
+router.get(
+  "/:team/:meetID/:eventID/:swimmerID/:sortField/:resPerSwimmer",
+  async (req, res) => {
+    const { team, meetID, eventID, swimmerID, sortField } = req.params;
+    console.log(req.params);
 
-  let SQLCommand = `SELECT * FROM races_{team}`;
+    let SQLCommand = `SELECT * FROM races_${team}`;
 
-  if (meetID) {
-    SQLCommand += ` WHERE meetid=${meetID}`;
-  }
-
-  if (eventID) {
-    if (meetID) {
-      SQLCommand += ` AND eventid=${eventID}`;
-    } else {
-      SQLCommand += ` WHERE eventid=${eventID}`;
+    if (meetID !== "null") {
+      SQLCommand += ` WHERE meetid=${meetID}`;
     }
-  }
 
-  if (swimmerID) {
-    if (meetID || eventID) {
-      SQLCommand += ` AND swimmerid=${swimmerID}`;
-    } else {
-      SQLCommand += ` WHERE swimmerid=${swimmerID}`;
+    if (eventID !== "null") {
+      if (meetID !== "null") {
+        SQLCommand += ` AND eventid=${eventID}`;
+      } else {
+        SQLCommand += ` WHERE eventid=${eventID}`;
+      }
     }
-  }
-  SQLCommand += ` ORDER BY ${sortField} ASC;`;
 
-  const conn = await connection(dbConfig).catch(e => console.error(e));
-  const results = await query(conn, SQLCommand).catch(e => console.error(e));
-  res.send(results);
-  res.end();
-});
+    if (swimmerID !== "null") {
+      if (meetID !== "null" || eventID !== "null") {
+        SQLCommand += ` AND swimmerid=${swimmerID}`;
+      } else {
+        SQLCommand += ` WHERE swimmerid=${swimmerID}`;
+      }
+    }
+    SQLCommand += ` ORDER BY ${sortField} ASC;`;
+
+    console.log(SQLCommand);
+
+    const conn = await connection(dbConfig).catch(e => console.error(e));
+    const results = await query(conn, SQLCommand).catch(e => console.error(e));
+    res.send(results);
+    res.end();
+  }
+);
 
 router.post("/", async (req, res) => {
   const { team, meetID, eventID, swimmerID, time } = req.body;

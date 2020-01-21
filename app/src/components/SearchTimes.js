@@ -1,11 +1,12 @@
 import React from 'react';
 
+import SearchTimesForm from './SearchTimesForm';
+
 const SearchTimes = props => {
   return (
     <div className="SearchTimesContainer">
-      <h1>Pick Team</h1>
-      <h1>Pick Meet</h1>
-      <h1>Pick Event</h1>
+      <h1>Seacrch Times</h1>
+      <SearchTimesForm {...props} />
     </div>
   );
 };

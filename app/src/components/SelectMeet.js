@@ -1,8 +1,10 @@
 import React from 'react';
 
 const SelectMeet = props => {
+  const required = props.notRequired === undefined ? true : false;
+
   return (
-    <select id="meet" name="meet" required>
+    <select id="meet" name="meet" required={required}>
       <option key="default" value="">Select Meet</option>
       {
         props.meets.map( meet => {
