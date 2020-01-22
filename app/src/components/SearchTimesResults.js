@@ -1,5 +1,7 @@
 import React from 'react';
 
+import timeFormatter from '../helpers/timeFormatter';
+
 const SearchTimesResults = props => {
   if(!props.results || props.results.length === 0) return <div className="SearchTimesResults">No Results</div>;
 
@@ -10,14 +12,14 @@ const SearchTimesResults = props => {
   return (
     <div className="SearchTimesResults">
       <h2 className="SearchTimesResultsEvent">{props.results[0].name}</h2>
-      <h3 className="SearchTimesEventCon">Cons / Auto -- {cons} / {auto}</h3>
+      <h3 className="SearchTimesEventCon">Cons / Auto -- {timeFormatter(cons)} / {timeFormatter(auto)}</h3>
       {props.results.map( result => {
         return (
           <div key={result.id} className="SearchTimesResultItem">
             <span className="SearchTimesResultName">{result.firstname} {result.lastname}
               <span className="SearchTimesResultClassOf"> ({result.class.toString().slice(2,4)})</span>
             </span>
-            <span className="SearchTimesResultTime">{result.time}</span>
+            <span className="SearchTimesResultTime">{timeFormatter(result.time)}</span>
             <span className="SearchTimesResultDate">({result.date.split('-')[1]}/{result.date.split('-')[2].split('T')[0]}/{result.date.split('-')[0].slice(2,4)})</span>
           </div> 
         );}
