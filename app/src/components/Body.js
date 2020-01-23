@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import SearchTimes from './SearchTimes';
 import SearchSwimmers from './SearchSwimmers';
-import SearchLineups from './SearchLineups';
+import SearchMeets from './SearchMeets';
 import SubmitTimes from './SubmitTimes';
 import CreateLineup from './CreateLineup';
 import CreateSwimmer from './CreateSwimmer';
@@ -15,7 +15,7 @@ const Body = props => {
       <Switch>
         <Route path="/SearchTimes" render={ () => <SearchTimes {...props} /> } /> 
         <Route path="/SearchSwimmers" render={ () => <SearchSwimmers {...props} /> } /> 
-        <Route path="/SearchLineups" render={ () => <SearchLineups {...props} /> } /> 
+        <Route path="/SearchMeets" render={ () => <SearchMeets {...props} /> } /> 
         <Route path="/SubmitTimes" render={ () => <SubmitTimes {...props} /> } /> 
         <Route path="/CreateLineup" render={ () => <CreateLineup {...props} /> } /> 
         <Route path="/CreateSwimmer" render={ () => <CreateSwimmer {...props} /> } /> 

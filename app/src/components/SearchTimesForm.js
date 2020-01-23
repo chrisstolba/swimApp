@@ -22,12 +22,11 @@ const SearchTimesForm = props => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const resultsPerSwimmer = document.getElementById('resultsPerSwimmer').value;
     const meetID = meet === '' ? 'null' : meet;
     const swimmer = null;
     const sortField = 'time';
 
-    const params = `/${team}/${meetID}/${event}/${swimmer}/${sortField}/${resultsPerSwimmer}`;
+    const params = `/${team}/${meetID}/${event}/${swimmer}/${sortField}`;
 
     const options = {
       method: 'GET',
@@ -55,11 +54,7 @@ const SearchTimesForm = props => {
         <label htmlFor="event">Event:</label>
         <SelectEvent events={props.events} />
       </p>
-      <p className="formElement_longLabel">
-        <label htmlFor="resultsPerSwimmer">Results Per Swimmer:</label>
-        <input id="resultsPerSwimmer" type="number" defaultValue="1" min="1" required />
-      </p>
-      <button type="Submit">Search Times</button> 
+      <button className="submitButton" type="Submit">Search Times</button> 
     </form>
   );
 };

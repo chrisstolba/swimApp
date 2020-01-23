@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const navButtons = [
   "Search Times",
   "Search Swimmers",
-  "Search Lineups",
+  "Search Meets",
   "Submit Times",
   "Create Lineup",
   "Create Swimmer",

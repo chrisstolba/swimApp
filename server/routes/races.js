@@ -6,7 +6,7 @@ const connection = require("../helpers/connection");
 const query = require("../helpers/query");
 
 router.get(
-  "/:team/:meetID/:eventID/:swimmerID/:sortField/:resPerSwimmer",
+  "/:team/:meetID/:eventID/:swimmerID/:sortField",
   async (req, res) => {
     const { team, meetID, eventID, swimmerID, sortField } = req.params;
 
@@ -31,7 +31,7 @@ router.get(
         SQLCommand += ` WHERE swimmerid=${swimmerID}`;
       }
     }
-    SQLCommand += ` GROUP BY r.swimmerid ORDER BY ${sortField} ASC;`;
+    SQLCommand += ` GROUP BY r.swimmerid, m.date ORDER BY ${sortField} ASC;`;
 
     const conn = await connection(dbConfig).catch(e => console.error(e));
     const results = await query(conn, SQLCommand).catch(e => console.error(e));

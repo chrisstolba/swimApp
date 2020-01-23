@@ -12,7 +12,7 @@ const SearchTimesResults = props => {
   return (
     <div className="SearchTimesResults">
       <h2 className="SearchTimesResultsEvent">{props.results[0].name}</h2>
-      <h3 className="SearchTimesEventCon">Cons / Auto -- {timeFormatter(cons)} / {timeFormatter(auto)}</h3>
+      <h3 className="SearchTimesEventCon">Auto / Cons -- {timeFormatter(auto)} / {timeFormatter(cons)}</h3>
       {props.results.map( result => {
         return (
           <div key={result.id} className="SearchTimesResultItem">
