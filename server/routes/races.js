@@ -10,7 +10,7 @@ router.get(
   async (req, res) => {
     const { team, meetID, eventID, swimmerID, sortField } = req.params;
 
-    let SQLCommand = `SELECT r.id, r.time, m.date, e.name, e.cons${team}, e.auto${team}, s.firstname, s.lastname, s.class FROM (((races_${team} AS r INNER JOIN meets AS m ON r.meetid = m.id) INNER JOIN events AS e ON r.eventid = e.id) INNER JOIN swimmers as s ON r.swimmerid = s.id)`;
+    let SQLCommand = `SELECT r.swimmerid, ANY_VALUE(r.id), MIN(r.time) time, m.date, e.name, e.cons${team}, e.auto${team}, s.firstname, s.lastname, s.class FROM (((races_${team} AS r INNER JOIN meets AS m ON r.meetid = m.id) INNER JOIN events AS e ON r.eventid = e.id) INNER JOIN swimmers as s ON r.swimmerid = s.id)`;
 
     if (meetID !== "null") {
       SQLCommand += ` WHERE meetid=${meetID}`;
@@ -31,8 +31,8 @@ router.get(
         SQLCommand += ` WHERE swimmerid=${swimmerID}`;
       }
     }
-    SQLCommand += ` ORDER BY ${sortField} ASC;`;
-  
+    SQLCommand += ` GROUP BY r.swimmerid ORDER BY ${sortField} ASC;`;
+
     const conn = await connection(dbConfig).catch(e => console.error(e));
     const results = await query(conn, SQLCommand).catch(e => console.error(e));
 
